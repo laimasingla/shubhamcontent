@@ -1,0 +1,21 @@
+
+			Product screen = new Product("Screen",50);
+		Product table = new Product("table",200);
+
+	Collection<Product> products =new ArrayList<>();
+	products.add(screen);
+	products.add(table);
+	
+	final Iterator<Product>productIterator= products.iterator() ;
+	while (productIterator.hasNext())
+	{
+		Product product = productIterator.next();
+		if (product.getWeight()>100)
+		{
+		System.out.println(product);
+		}
+		else
+		{
+			productIterator.remove();
+		}
+		}
